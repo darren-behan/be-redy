@@ -8,6 +8,7 @@ const passport = require("./config/passport");
 const {
   allowInsecurePrototypeAccess
 } = require("@handlebars/allow-prototype-access");
+const compression = require("compression");
 
 // Setting up port and requiring models for syncing
 const PORT = process.env.PORT || 8080;
@@ -24,6 +25,8 @@ app.use(
 );
 app.use(passport.initialize());
 app.use(passport.session());
+
+app.use(compression());
 
 // Set Handlebars.
 app.engine(
