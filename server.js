@@ -8,7 +8,7 @@ const passport = require("./config/passport");
 const {
   allowInsecurePrototypeAccess
 } = require("@handlebars/allow-prototype-access");
-const compression = require('compression')
+const compression = require("compression");
 
 // Setting up port and requiring models for syncing
 const PORT = process.env.PORT || 8080;
